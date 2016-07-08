@@ -14,18 +14,25 @@ int main()
     double val1, val2;
     double result;
     
-    cout << "Please enter an operator and two numbers separated by spaces (e.g. '+ 1 1'): ";
-    cin >> operation >> val1 >> val2;
+    cout << "Please enter two decimal numbers and an operator, separated by spaces (e.g. '1 1 +'): ";
+    cin >> val1 >> val2 >> operation;
     
-    if (operation == "+")
+    if (operation == "+") {
         result = val1 + val2;
-    else if (operation == "-")
+        cout << "The sum of " << val1 << " and " << val2 << " is " << result << ".\n";
+    }
+    else if (operation == "-") {
         result = val1 - val2;
-    else if (operation == "*")
+        cout << "The difference between " << val1 << " and " << val2 << " is " << result << ".\n";
+    }
+    else if (operation == "*") {
         result = val1 * val2;
-    else if (operation == "/")
+        cout << "The product of " << val1 << " and " << val2 << " is " << result << ".\n";
+    }
+    else if (operation == "/") {
         result = val1 / val2;
-    
-    cout << result << "\n";
+        cout << "The quotient of " << val1 << " and " << val2 << " is " << result << ".\n";
+    }
+
     return 0;
 }
